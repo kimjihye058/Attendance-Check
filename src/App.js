@@ -3,6 +3,7 @@ import './App.css';
 import Start from "./start/start";
 import Part from './part/part';
 import Attendance from "./attendance/attendance";
+import End from "./end/end";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />} />  {/* 잘못된 경로일 경우 Main으로 리다이렉트 */}
         <Route path="/part" element={<Part />} />
         <Route path="/attendance" element={<Attendance />} />
-
+        <Route path="/end" element={<End />} />
       </Routes>
     </Router>
   );

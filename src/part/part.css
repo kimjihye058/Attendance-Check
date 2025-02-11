@@ -1,4 +1,4 @@
-.part-background {
+.background {
     background-color: #2A303F;
     background-size: cover;
     background-position: center;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.part-background img{
+.background img{
     position: absolute;
 }
 

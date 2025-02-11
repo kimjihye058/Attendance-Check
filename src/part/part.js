@@ -3,7 +3,7 @@ import "./part.css";
 
 const part = () => {
   return (
-    <div className='part-background'>
+    <div className='background'>
         <img 
             src='../images/backBtn.png'
             alt='뒤로가기 버튼'

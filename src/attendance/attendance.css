@@ -1,0 +1,21 @@
+.attendance-finish {
+    width: 135px;
+    height: 63px;
+    border-radius: 10px;
+    background-color: #999;
+    color: #fff;
+    font-family: 'PRETENDARD-SEMIBOLD';
+    font-size: 40px;
+    float: right;
+    margin-top: 45px;
+    margin-right: 45px;
+}
+
+.attendance-header {
+    font-family: 'PRETENDARD-REGULAR';
+    font-size: 70px;
+    color: #fff;
+    white-space: pre-line;
+    text-align: center;
+    padding-top: 125px;
+}

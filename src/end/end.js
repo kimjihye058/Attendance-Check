@@ -5,7 +5,7 @@ import "./end.css";
 const End = () => {
   const navigate = useNavigate();
     
-    const [countdown, setCountdown] = useState(5); 
+    const [countdown, setCountdown] = useState(3); 
     useEffect(() => {
         const timer = setInterval(() => {
           setCountdown((prev) => prev - 1);
@@ -13,7 +13,7 @@ const End = () => {
     
         const timeout = setTimeout(() => {
           navigate("/");
-        }, 5000);
+        }, 3000);
     
         return () => {
           clearInterval(timer);

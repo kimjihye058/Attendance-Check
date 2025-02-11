@@ -2,8 +2,11 @@
     background-color: #2A303F;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
+    position: relative;
+    overflow: auto;
 }
 
 .background img{
@@ -38,6 +41,7 @@
     border-radius: 10px;
     font-family: 'PRETENDARD-REGULAR';
     font-size: 60px;
+    cursor: pointer;
 }
 
 .part-alto {
@@ -47,6 +51,7 @@
     border-radius: 10px;
     font-family: 'PRETENDARD-REGULAR';
     font-size: 60px;
+    cursor: pointer;
 }
 
 .part-ten {
@@ -56,6 +61,7 @@
     border-radius: 10px;
     font-family: 'PRETENDARD-REGULAR';
     font-size: 60px;
+    cursor: pointer;
 }
 
 .part-bass {
@@ -65,4 +71,15 @@
     border-radius: 10px;
     font-family: 'PRETENDARD-REGULAR';
     font-size: 60px;
+    cursor: pointer;
 }
+
+.student-card.selected {
+    outline: 8px solid #A92A2B;
+  }
+  
+  .attendance-finish.selected {
+    background-color: #A92A2B;
+    color: white;
+  }
+  

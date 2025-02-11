@@ -19,3 +19,37 @@
     text-align: center;
     padding-top: 125px;
 }
+
+.attendance-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 정렬 */
+    gap: 35px; /* 카드 간격 */
+    justify-content: center;
+    margin: 75px;
+}
+
+.student-card {
+    width: 205px;
+    height: 277px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-img {
+    margin-top: 22px;
+}
+
+.student-grade{
+    margin-top: 165px;
+    font-family: 'PRETENDARD-REGULAR';
+    font-size: 25px;
+}
+
+.student-name{
+    margin-top: -20px;
+    font-family: 'PRETENDARD-REGULAR';
+    font-size: 50px;
+}

@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./part.css";
 
-const part = () => {
+const Part = () => {
+  const navigate = useNavigate();
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
   return (
     <div className='background'>
         <img 
             src='../images/backBtn.png'
             alt='뒤로가기 버튼'
             className='backBtn'
+            onClick={handleBackClick}
         />
         <div className='part-header'>
             {`본인의 파트를\n선택해주세요`}
@@ -23,4 +30,4 @@ const part = () => {
   )
 }
 
-export default part
+export default Part;

@@ -1,7 +1,23 @@
-import React from 'react';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./start.css";
 
-const start = () => {
+const Start = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleClick = () => {
+      navigate("/part");
+    };
+
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [navigate]);
+
+
   return (
     <div className='start-background'>
       <div className='start-header'>
@@ -14,4 +30,4 @@ const start = () => {
   )
 }
 
-export default start;
+export default Start;

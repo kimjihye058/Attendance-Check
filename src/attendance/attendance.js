@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
+import { submitAttendance } from "../api/attendanceApi"; // 추가
 import './attendance.css';
 
 const studentData = {
@@ -62,11 +63,29 @@ const Attendance = () => {
     setSelectedStudent(student);
   };
 
-  const handleFinishClick = () => {
-    if (selectedStudent) {
-      navigate("/end");
-    } else {
-      alert("학생을 선택해주세요");
+  const handleFinishClick = async () => {
+    const name = selectedStudent ? selectedStudent.name : null; // 클릭된 학생의 이름
+    const time = new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
+
+    if (!name || !time) {
+        console.error("이름과 시간을 입력해주세요.");
+        return; // 또는 사용자에게 경고 표시
+    }
+
+    try {
+        const result = await submitAttendance(name, time);
+        console.log(result); // API 응답 확인
+
+        // 성공적으로 출석 체크가 완료된 경우의 처리
+        if (result && !result.error) {
+            alert("출석 체크가 완료되었습니다."); // 성공 메시지 표시
+            // 추가로 화면 업데이트 등 필요한 작업 수행
+        } else {
+            alert(result.error || "출석 체크에 실패했습니다."); // 오류 메시지 표시
+        }
+    } catch (error) {
+        console.error("출석 체크 중 오류 발생:", error);
+        alert("출석 체크 중 오류가 발생했습니다."); // 오류 메시지 표시
     }
   };
 
@@ -74,22 +93,22 @@ const Attendance = () => {
 
   return (
     <div className='background'>
-        <img 
-          src='../images/backBtn.png'
-          alt='뒤로가기 버튼'
-          className='backBtn'
-          onClick={handleBackClick}
-        />
-        <button 
-          className={`attendance-finish ${selectedStudent ? 'selected' : ''}`}
-          onClick={handleFinishClick}
-        >
-          완료
-        </button>
-        <div className='attendance-header'>
-            {`본인의 이름을\n선택해주세요`}
-        </div>
-        <div className="attendance-container">
+      <img 
+        src='../images/backBtn.png'
+        alt='뒤로가기 버튼'
+        className='backBtn'
+        onClick={handleBackClick}
+      />
+      <button 
+        className={`attendance-finish ${selectedStudent ? 'selected' : ''}`}
+        onClick={handleFinishClick}
+      >
+        완료
+      </button>
+      <div className='attendance-header'>
+        {`본인의 이름을\n선택해주세요`}
+      </div>
+      <div className="attendance-container">
         {students.map((student, index) => (
           <div 
             key={index} 

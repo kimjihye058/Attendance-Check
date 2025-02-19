@@ -78,8 +78,7 @@ const Attendance = () => {
 
         // 성공적으로 출석 체크가 완료된 경우의 처리
         if (result && !result.error) {
-            alert("출석 체크가 완료되었습니다."); // 성공 메시지 표시
-            // 추가로 화면 업데이트 등 필요한 작업 수행
+            navigate("/end");
         } else {
             alert(result.error || "출석 체크에 실패했습니다."); // 오류 메시지 표시
         }

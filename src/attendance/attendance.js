@@ -60,33 +60,24 @@ const Attendance = () => {
   };
 
   const handleCardClick = (student) => {
-    setSelectedStudent(student);
+    setSelectedStudent({ ...student, part }); 
   };
+  const handleFinishClick = () => {
 
-  const handleFinishClick = async () => {
-    const name = selectedStudent ? selectedStudent.name : null; // 클릭된 학생의 이름
+    if (!selectedStudent) return;
+
+    const { part, grade, name } = selectedStudent;
     const time = new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
-
-    if (!name || !time) {
-        console.error("이름과 시간을 입력해주세요.");
-        return; // 또는 사용자에게 경고 표시
-    }
-
-    try {
-        const result = await submitAttendance(name, time);
-        console.log(result); // API 응답 확인
-
-        // 성공적으로 출석 체크가 완료된 경우의 처리
-        if (result && !result.error) {
-            navigate("/end");
-        } else {
-            alert(result.error || "출석 체크에 실패했습니다."); // 오류 메시지 표시
-        }
-    } catch (error) {
-        console.error("출석 체크 중 오류 발생:", error);
-        alert("출석 체크 중 오류가 발생했습니다."); // 오류 메시지 표시
-    }
+  
+    submitAttendance(part, grade, name, time)
+      .then((response) => {
+        console.log("🔥 출석 체크 응답:", response);
+      })
+      .catch((error) => {
+        console.error("🔥 출석 체크 중 오류 발생:", error);
+      });
   };
+  
 
   const students = studentData[part] || [];
 

@@ -5,48 +5,48 @@ import './attendance.css';
 
 const studentData = {
   soprano: [
-    { name: "김은서", grade: "고3", img: "sop김은서.png" },
-    { name: "김지혜", grade: "고3", img: "sop김지혜.png" },
-    { name: "송예나", grade: "고3", img: "sop송예나.png" },
-    { name: "유지연", grade: "고2", img: "sop유지연.png" },
-    { name: "이윤슬", grade: "고2", img: "sop이윤슬.png" },
-    { name: "홍준희", grade: "고2", img: "sop홍준희.png" },
-    { name: "김지유", grade: "중3", img: "sop김지유.png" },
-    { name: "안예림", grade: "중3", img: "sop안예림.png" },
-    { name: "유예봄", grade: "중3", img: "sop유예봄.png" },
-    { name: "최샤론", grade: "중3", img: "sop최샤론.png" },
-    { name: "송유나", grade: "중2", img: "sop송유나.png" },
-    { name: "이열음", grade: "중2", img: "sop이열음.png" },
+    { name: "김은서", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/sop_kimeunseo.png" },
+    { name: "김지혜", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/sop_kimjihye.png" },
+    { name: "송예나", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/sop_songyena.png" },
+    { name: "유지연", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/sop_yoojiyeon.png" },
+    { name: "이윤슬", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/sop_leeyunseul.png" },
+    { name: "홍준희", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/sop_hongjunhee.png" },
+    { name: "김지유", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/sop_kimjiyu.png" },
+    { name: "안예림", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/sop_ahnyerim.png" },
+    { name: "유예봄", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/sop_yuyebom.png" },
+    { name: "최샤론", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/sop_choisharon.png" },
+    { name: "송유나", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/sop_songyuna.png" },
+    { name: "이열음", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/sop_leeyeoleum.png" },
   ],
   alto: [
-    { name: "김현서", grade: "고3", img: "alto김현서.png" },
-    { name: "이예나", grade: "고3", img: "alto이예나.png" },
-    { name: "정윤진", grade: "고3", img: "alto정윤진.png" },
-    { name: "권설아", grade: "고2", img: "alto권설아.png" },
-    { name: "서하진", grade: "고2", img: "alto서하진.png" },
-    { name: "추효린", grade: "고1", img: "alto추효린.png" },
-    { name: "김다민", grade: "중3", img: "alto김다민.png" },
-    { name: "엄태은", grade: "중3", img: "alto엄태은.png" },
-    { name: "최시온", grade: "중3", img: "alto최시온.png" },
-    { name: "이연서", grade: "중2", img: "alto이연서.png" },
-    { name: "이예담", grade: "중2", img: "alto이예담.png" },
+    { name: "김현서", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/alto_kimhyunseo.png" },
+    { name: "이예나", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/alto_leeyena.png" },
+    { name: "정윤진", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/alto_jeongyunjin.png" },
+    { name: "권설아", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/alto_kwonseolah.png" },
+    { name: "서하진", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/alto_seohajin.png" },
+    { name: "추효린", grade: "고1", img: "https://sarang-yc-attendance.web.app/images/alto_choohyorin.png" },
+    { name: "김다민", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/alto_kimdamin.png" },
+    { name: "엄태은", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/alto_eomtaeeun.png" },
+    { name: "최시온", grade: "중3", img: "https://sarang-yc-attendance.web.app/images/alto_choision.png" },
+    { name: "이연서", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/alto_leeyeonseo.png" },
+    { name: "이예담", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/alto_leeyedam.png" },
   ],
   tenor: [
-    { name: "이동진", grade: "고3", img: "ten이동진.png" },
-    { name: "정진우", grade: "고3", img: "ten정진우.png" },
-    { name: "최은성", grade: "고2", img: "ten최은성.png" },
-    { name: "홍균형", grade: "고1", img: "ten홍균형.png" },
-    { name: "최지온", grade: "중2", img: "ten최지온.png" },
-    { name: "홍성하", grade: "중2", img: "ten홍성하.png" },
+    { name: "이동진", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/ten_leedongjin.png" },
+    { name: "정진우", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/ten_jeongjinwoo.png" },
+    { name: "최은성", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/ten_choieunseong.png" },
+    { name: "홍균형", grade: "고1", img: "https://sarang-yc-attendance.web.app/images/ten_honggyunhyeong.png" },
+    { name: "최지온", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/ten_choijion.png" },
+    { name: "홍성하", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/ten_hongseongha.png" },
   ],
   bass: [
-    { name: "문희수", grade: "고3", img: "bass문희수.png" },
-    { name: "김규은", grade: "고2", img: "bass김규은.png" },
-    { name: "이윤우", grade: "고2", img: "bass이윤우.png" },
-    { name: "문다몬", grade: "고1", img: "bass문다몬.png" },
-    { name: "장민준", grade: "고1", img: "bass장민준.png" },
-    { name: "전의연", grade: "고1", img: "bass전의연.png" },
-    { name: "문윤수", grade: "중2", img: "bass문윤수.png" },
+    { name: "문희수", grade: "고3", img: "https://sarang-yc-attendance.web.app/images/bass_moonheesoo.png" },
+    { name: "김규은", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/bass_kimgyueun.png" },
+    { name: "이윤우", grade: "고2", img: "https://sarang-yc-attendance.web.app/images/bass_leeyunwoo.png" },
+    { name: "문다몬", grade: "고1", img: "https://sarang-yc-attendance.web.app/images/bass_mundamon.png" },
+    { name: "장민준", grade: "고1", img: "https://sarang-yc-attendance.web.app/images/bass_jangminjun.png" },
+    { name: "전의연", grade: "고1", img: "https://sarang-yc-attendance.web.app/images/bass_jeoneuiyeon.png" },
+    { name: "문윤수", grade: "중2", img: "https://sarang-yc-attendance.web.app/images/bass_moonyunsu.png" },
   ],
 };
 
@@ -58,26 +58,26 @@ const Attendance = () => {
   const handleBackClick = () => {
     navigate("/part");
   };
-
+  
   const handleCardClick = (student) => {
-    setSelectedStudent({ ...student, part }); 
+    setSelectedStudent(student);
   };
-  const handleFinishClick = () => {
 
+  const handleFinishClick = () => {
     if (!selectedStudent) return;
 
-    const { part, grade, name } = selectedStudent;
+    const { grade, name } = selectedStudent;
     const time = new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
-  
+    
     submitAttendance(part, grade, name, time)
       .then((response) => {
         console.log("🔥 출석 체크 응답:", response);
+        navigate("/end"); // 완료 후 /end로 이동
       })
       .catch((error) => {
         console.error("🔥 출석 체크 중 오류 발생:", error);
       });
   };
-  
 
   const students = studentData[part] || [];
 
@@ -105,7 +105,7 @@ const Attendance = () => {
             className={`student-card ${selectedStudent === student ? 'selected' : ''}`}
             onClick={() => handleCardClick(student)}
           >
-            <img src={`/images/${student.img}`} alt={student.name} className='student-img'/>
+            <img src={student.img} alt={student.name} className='student-img'/>
             <p className='student-grade'>{student.grade}</p>
             <p className='student-name'>{student.name}</p>
           </div>

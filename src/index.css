@@ -1,23 +1,13 @@
 @font-face {
-  font-family: 'PRETENDARD-REGULAR'; /* 사용할 폰트의 이름을 정의 */
-  src: url('../public/fonts/PRETENDARD-REGULAR.OTF'); /* 폰트 파일의 위치 */
+  font-family: "PRETENDARD-REGULAR";
+  src: url("../public/fonts/PRETENDARD-REGULAR.OTF");
 }
 
 @font-face {
-  font-family: 'PRETENDARD-SEMIBOLD'; /* 사용할 폰트의 이름을 정의 */
-  src: url('../public/fonts/PRETENDARD-SEMIBOLD.OTF'); /* 폰트 파일의 위치 */
+  font-family: "PRETENDARD-SEMIBOLD";
+  src: url("../public/fonts/PRETENDARD-SEMIBOLD.OTF");
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

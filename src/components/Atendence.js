@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { submitAttendance } from "../api/attendanceApi";
 import styled from "styled-components";
-import { Background, Header, HeaderDiv } from "./Part"; // 재사용
+import { Background, Header, HeaderDiv } from "./Part";
 import { IconChevronLeft } from "@tabler/icons-react";
 
 const studentData = {
@@ -31,11 +31,6 @@ const studentData = {
       name: "이윤슬",
       grade: "고2",
       img: "https://sarang-yc-attendance.web.app/images/sop_leeyunseul.png",
-    },
-    {
-      name: "차지우",
-      grade: "고2",
-      img: "https://sarang-yc-attendance.web.app/images/sop_chajiu.png",
     },
     {
       name: "홍준희",
@@ -303,13 +298,14 @@ export default function Attendance() {
           onClick={handleBackClick}
         />
         <Header>본인의 이름을 선택해주세요</Header>
+        <FinishButton
+          style={{ backgroundColor: selectedStudent ? "#a92a2b" : "#999" }}
+          onClick={handleFinishClick}
+        >
+          완료
+        </FinishButton>
       </HeaderDiv>
-      <FinishButton
-        className={`attendance-finish ${selectedStudent ? "selected" : ""}`}
-        onClick={handleFinishClick}
-      >
-        완료
-      </FinishButton>
+
       <AttendanceContainer>
         {students.map((student, index) => (
           <StudentCard
@@ -336,15 +332,14 @@ const FinishButton = styled.button`
   background-color: #999;
   color: #fff;
   font-family: "PRETENDARD-SEMIBOLD";
-  font-size: 20px;
-  float: right;
-  margin-top: 45px;
-  margin-right: 45px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 400px;
 `;
 
 const AttendanceContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 35px;
   justify-content: center;
   margin: 75px;
@@ -358,6 +353,7 @@ const StudentCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 
   &.selected {
     outline: 8px solid #a92a2b;

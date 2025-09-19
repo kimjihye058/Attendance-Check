@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { submitAttendance } from "../api/attendanceApi";
 import styled from "styled-components";
-import { Background, BackImg, Header } from "./Part"; // 재사용
+import { Background, Header, HeaderDiv } from "./Part"; // 재사용
+import { IconChevronLeft } from "@tabler/icons-react";
 
 const studentData = {
   soprano: [
@@ -293,18 +294,22 @@ export default function Attendance() {
 
   return (
     <Background>
-      <BackImg
-        src="../images/backBtn.png"
-        alt="뒤로가기 버튼"
-        onClick={handleBackClick}
-      />
+      <HeaderDiv>
+        <IconChevronLeft
+          color="white"
+          width={100}
+          height={100}
+          stroke={1.3}
+          onClick={handleBackClick}
+        />
+        <Header>본인의 이름을 선택해주세요</Header>
+      </HeaderDiv>
       <FinishButton
         className={`attendance-finish ${selectedStudent ? "selected" : ""}`}
         onClick={handleFinishClick}
       >
         완료
       </FinishButton>
-      <Header>{`본인의 이름을\n선택해주세요`}</Header>
       <AttendanceContainer>
         {students.map((student, index) => (
           <StudentCard

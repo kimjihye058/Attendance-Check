@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { IconChevronLeft } from "@tabler/icons-react";
 
 export default function Part() {
   const navigate = useNavigate();
@@ -10,12 +11,18 @@ export default function Part() {
 
   return (
     <Background className="background">
-      <BackImg
-        src="../images/backBtn.png"
-        alt="뒤로가기 버튼"
-        onClick={() => handleNavigation("/")}
-      />
-      <Header>{`본인의 파트를\n선택해주세요`}</Header>
+      <HeaderDiv>
+        <BackIconDiv>
+          <IconChevronLeft
+            color="white"
+            width={100}
+            height={100}
+            stroke={1.3}
+            onClick={() => handleNavigation("/")}
+          />
+        </BackIconDiv>
+        <Header>본인의 파트를 선택해주세요</Header>
+      </HeaderDiv>
       <PartSelect>
         <PartButton onClick={() => handleNavigation("/attendance/soprano")}>
           소프라노
@@ -36,10 +43,6 @@ export default function Part() {
 
 export const Background = styled.div`
   background-color: #2a303f;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
   height: 100vh;
   position: relative;
   overflow: auto;
@@ -49,30 +52,40 @@ export const Background = styled.div`
   }
 `;
 
-export const BackImg = styled.img`
-  padding: 45px;
+export const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 40px;
+  gap: 20px;
+`;
+
+export const BackIconDiv = styled.div`
+  cursor: pointer;
 `;
 
 export const Header = styled.div`
   font-family: "PRETENDARD-REGULAR";
-  font-size: 70px;
+  font-size: 60px;
   color: #fff;
   white-space: pre-line;
-  text-align: center;
-  padding-top: 125px;
 `;
 
 const PartSelect = styled.div`
-  margin-top: 160px;
+  margin-top: 100px;
   display: flex;
-  flex-direction: column;
-  gap: 50px;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 80px;
+  margin-left: 80px;
 `;
 
 const PartButton = styled.button`
-  width: 600px;
-  height: 100px;
+  width: 400px;
+  height: 500px;
   background-color: #f5f5f5;
   border-radius: 10px;
   font-family: "PRETENDARD-REGULAR";
